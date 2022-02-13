@@ -76,7 +76,7 @@ router.get("/", auth.optional, function(req, res, next) {
           .skip(Number(offset))
           .sort({ createdAt: "desc" })
           .exec(),
-        Item.count(query).exec(),
+        Item.countDocuments(query).exec(),
         req.payload ? User.findById(req.payload.id) : null
       ]).then(async function(results) {
         var items = results[0];
@@ -119,7 +119,7 @@ router.get("/feed", auth.required, function(req, res, next) {
         .skip(Number(offset))
         .populate("seller")
         .exec(),
-      Item.count({ seller: { $in: user.following } })
+      Item.countDocuments({ seller: { $in: user.following } })
     ])
       .then(function(results) {
         var items = results[0];
