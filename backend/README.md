@@ -8,6 +8,8 @@ To start the app use: `./start.sh` from the backend directory.
 
 Make sure your DB is up and running.
 
+Local server will be available at: http://localhost:3000 
+
 ## Dependencies
 
 - [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) - For generating JWTs used by authentication

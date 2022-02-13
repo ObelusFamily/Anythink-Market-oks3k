@@ -6,7 +6,8 @@ The Anythink Frontend is an SPA written with [React](https://reactjs.org/) and [
 
 To start the app use: `./start.sh` from the frontend directory.
 
-Make sure your server is up and running to serve requests.
+Make sure your server is up and running to serve requests:
+http://localhost:3001/
 
 ## Pages overview
 
